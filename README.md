@@ -16,9 +16,9 @@
 #### Create new account grader
 8. `$ sudo su -`
 9. `$ sudo nano /etc/sudoers.d/grader`
-    grader ALL=(ALL:ALL) ALL
+    Add `grader ALL=(ALL:ALL) ALL`
 10. `$ sudo nano /etc/hosts`
-    Under 127.0.1.1:localhost add 127.0.1.1 ip-10-20-37-65
+    Under `127.0.1.1:localhost` add `127.0.1.1 ip-10-20-37-65`
 #### Install updates and finger package
 11. `$ sudo apt-get update`
     `$ sudo apt-get upgrade`
@@ -40,17 +40,17 @@
 22. `$ ssh -i ~/.ssh/udacity_key.rsa grader@18.221.145.45`
 #### Enforce key based authentication
 23. `$ sudo nano /etc/ssh/sshd_config`
-24. Find the PasswordAuthentication line and change text after to no
+24. Find the PasswordAuthentication line and change text after to `no`
 25. `$ sudo service ssh restart`
 #### Change port
 26. `$ sudo nano /etc/ssh/sshd_config`
-27. Find the Port line and change 22 to 2200
+27. Find the Port line and change `22` to `2200`
 28. `$ sudo service ssh restart`
 29. `$ ~.`
 30. `$ ssh -i ~/.ssh/udacity_key.rsa -p 2200 grader@18.221.145.45`
 #### Disable root login
 31. `$ sudo nano /etc/ssh/sshd_config`
-32. Find the PermitRootLogin line and edit to no
+32. Find the PermitRootLogin line and edit to `no`
 33. `$ sudo service ssh restart`
 #### Configure UFW
 34. `$ sudo ufw allow 2200/tcp`
@@ -99,9 +99,9 @@
     `$ sudo pip -h install render_template`  
     `$ sudo pip -h install sqlalchemy_utils`  
     `$ sudo pip -h install redirect`  
-43. nano __init__.py
-    change the client_secrets.json line to /var/www/catalog/catalog/client_secrets.json
-44. change the host to your Amazon Lightsail public IP address and port to 80
+43. `$nano __init__.py`
+    Change the client_secrets.json line to /var/www/catalog/catalog/client_secrets.json
+44. Change the host to 18.221.145.45 and port to 80
 #### Configure virtual host
 
 45. `$ sudo nano /etc/apache2/sites-available/catalog.conf`
@@ -136,12 +136,13 @@
 47. `$ CREATE USER catalog WITH PASSWORD 'password';`
     `$ ALTER USER catalog CREATEDB;`
     `$ CREATE DATABASE catalog WITH OWNER catalog;`
-    Connect to database $ \c catalog
+    Connect to database `$ \c catalog`
     `$ REVOKE ALL ON SCHEMA public FROM public;`
     `$ GRANT ALL ON SCHEMA public TO catalog;`
-    Quit the postgrel command line: $ \q and then $ exit
-48. use nano again to edit your__init__.py, database_setup.py, and createitems.py files to change the database engine from sqlite://catalog.db to postgresql://username:password@localhost/catalog
-49. Add `ec2-18-221-145-45.us-east-2.compute.amazonaws.com` to Authorized JavaScript Origins and Authorised redirect URIs on Google Console.
+    Quit the postgres command line: `$ \q` and then `$ exit`
+48. `$ nano __init__.py`
+     Edit database_setup.py, and menus.py files to change the database engine from `sqlite://catalog.db` to                   `postgresql://catalog:password@localhost/catalog`
+49. Add `ec2-18-221-145-45.us-east-2.compute.amazonaws.com` to Authorized JavaScript Origins and Authorised redirect URIs on Google Developer Console.
 50. `$ sudo service apache2 restart`
 
 ### Reference:
