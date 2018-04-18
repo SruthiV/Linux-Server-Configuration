@@ -145,6 +145,6 @@
 49. Add `ec2-18-221-145-45.us-east-2.compute.amazonaws.com` to Authorized JavaScript Origins and Authorised redirect URIs on Google Developer Console.
 50. `$ sudo service apache2 restart`
 
-### Reference:
-https://github.com/callforsky/udacity-linux-configuration
+### References
+https://github.com/callforsky/udacity-linux-configuration  
 https://github.com/mulligan121/Udacity-Linux-Configuration
