@@ -89,16 +89,16 @@
     `$ source venv/bin/activate`
     `$ sudo chmod -R 777 venv`
 #### Install flask and other packages
-42. `$ sudo apt-get -H install python-pip`
-    `$ sudo pip -h install Flask`
-    `$ sudo pip -h install Requests`
-    `$ sudo pip -h install httplib2`
-    `$ sudo pip -h install sqlalchemy`
-    `$ sudo pip -h install psycopg2`
-    `$ sudo pip -h install oauth2client`
-    `$ sudo pip -h install render_template`
-    `$ sudo pip -h install sqlalchemy_utils`
-    `$ sudo pip -h install redirect`
+42. `$ sudo apt-get -H install python-pip`  
+    `$ sudo pip -h install Flask`  
+    `$ sudo pip -h install Requests`  
+    `$ sudo pip -h install httplib2`  
+    `$ sudo pip -h install sqlalchemy`  
+    `$ sudo pip -h install psycopg2`  
+    `$ sudo pip -h install oauth2client`  
+    `$ sudo pip -h install render_template`  
+    `$ sudo pip -h install sqlalchemy_utils`  
+    `$ sudo pip -h install redirect`  
 43. nano __init__.py
     change the client_secrets.json line to /var/www/catalog/catalog/client_secrets.json
 44. change the host to your Amazon Lightsail public IP address and port to 80
@@ -129,10 +129,10 @@
 ```
  
 #### Database
-46. `$ sudo apt-get install libpq-dev python-dev`
-    `$ sudo apt-get install postgresql postgresql-contrib`
-    `$ sudo su - postgres`
-    `$ psql`
+46. `$ sudo apt-get install libpq-dev python-dev`  
+    `$ sudo apt-get install postgresql postgresql-contrib`  
+    `$ sudo su - postgres`  
+    `$ psql`  
 47. `$ CREATE USER catalog WITH PASSWORD 'password';`
     `$ ALTER USER catalog CREATEDB;`
     `$ CREATE DATABASE catalog WITH OWNER catalog;`
