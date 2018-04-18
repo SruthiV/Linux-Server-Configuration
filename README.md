@@ -74,6 +74,7 @@
 39. `$ git clone https://github.com/SruthiV/Item-Catalog.git catalog`
 ##### Create .wsgi file
 40. `$sudo nano catalog.wsgi`
+```
     import sys
     import logging
     logging.basicConfig(stream=sys.stderr)
@@ -81,6 +82,7 @@
 
     from catalog import app as application
     application.secret_key = 'super_secret_key'
+```
 41. Rename the application.py to __init__.py
 ##### Virtual Machine
 42. `$ sudo pip install virtualenv`
@@ -97,7 +99,9 @@
     change the client_secrets.json line to /var/www/catalog/catalog/client_secrets.json
 45. change the host to your Amazon Lightsail public IP address and port to 80
 ##### Configure virtual host
+
 46. `$ sudo nano /etc/apache2/sites-available/catalog.conf`
+```
     <VirtualHost *:80>
     ServerName [18.221.145.45]
     ServerAlias [ec2-18-221-145-45.us-east-2.compute.amazonaws.com]
@@ -117,7 +121,9 @@
     ErrorLog ${APACHE_LOG_DIR}/error.log
     LogLevel warn
     CustomLog ${APACHE_LOG_DIR}/access.log combined
-  </VirtualHost>
+    </VirtualHost>
+```
+ 
 ##### Database
 47. `$ sudo apt-get install libpq-dev python-dev`
     `$ sudo apt-get install postgresql postgresql-contrib`
