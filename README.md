@@ -5,7 +5,7 @@
 > Public IP: 18.221.145.45  
 > Host name: ec2-18-221-145-45.us-east-2.compute.amazonaws.com
 
-[LIVE DEMO](ec2-18-221-145-45.us-east-2.compute.amazonaws.com)
+[LIVE DEMO](http://ec2-18-221-145-45.us-east-2.compute.amazonaws.com)
 
 
 ### How To:  
