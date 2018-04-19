@@ -1,5 +1,7 @@
 # Linux Server Configuration
+> Sruthi Vinukonda
 
+### IP and URL
 > Public IP: 18.221.145.45  
 > Host name: ec2-18-221-145-45.us-east-2.compute.amazonaws.com
 
