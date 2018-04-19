@@ -1,12 +1,29 @@
 # Linux Server Configuration
 > Sruthi Vinukonda
 
-### IP and URL
+### IP and URL:
 > Public IP: 18.221.145.45  
 > Host name: ec2-18-221-145-45.us-east-2.compute.amazonaws.com
 
 [LIVE DEMO](http://ec2-18-221-145-45.us-east-2.compute.amazonaws.com)
 
+### Software:
+* Openssh Server
+* Apache2
+* PostgreSQL
+* GIT
+* mod_wsgi
+* Python
+* virtualenv
+* Flask
+* requests  
+* httplib2  
+* sqlalchemy 
+* psycopg2
+* oauth2client 
+* render_template
+* sqlalchemy_utils  
+* redirect
 
 ### How To:  
 #### Amazon Lightsail
@@ -29,7 +46,7 @@
     `$ sudo apt-get upgrade`
     `$ sudo apt-get install finger`
 #### Keygen
-12. In a new terminal, `$ ssh-keygen -f ~/.ssh/udacity_key.rsa`
+12. In a new terminal, `$ ssh-keygen -f ~/.ssh/udacity_key.rsa
 13. `$ cat ~/.ssh/udacity_key.rsa.pub`
 14. In the original terminal, `$ cd /home/grader`
 15. `$ mkdir .ssh`
@@ -150,6 +167,6 @@
 49. Add `ec2-18-221-145-45.us-east-2.compute.amazonaws.com` to Authorized JavaScript Origins and Authorised redirect URIs on Google Developer Console.
 50. `$ sudo service apache2 restart`
 
-### References
+### References:
 https://github.com/callforsky/udacity-linux-configuration  
 https://github.com/mulligan121/Udacity-Linux-Configuration
